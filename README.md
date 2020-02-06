@@ -55,7 +55,8 @@ Move Grand.Drop.csv to WinXP and read into R ver 2.12.2: https://cran-archive.r-
 Run the following code, note that the DOS XTide appends to the output file each time it is run, so the output file needs to be deleted each time after being read into R.
 
 
-Helper function from: https://github.com/John-R-Wallace-NOAA/JRWToolBox , base::strsplit() could be used, but it is a little more awkward.
+Helper function below is from: https://github.com/John-R-Wallace-NOAA/JRWToolBox 
+- base::strsplit() could be used, but it is a little more awkward.
        
        get.subs <- function (x, sep = ",", collapse = F)       {
           subs <- function(x, sep = ",") {
