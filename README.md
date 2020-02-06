@@ -13,7 +13,7 @@ Set up a data frame in R with tide station names ( https://flaterco.com/xtide/lo
           Grand.Drop <- JRWToolBox::match.f(Grand.Drop, Site.Tide.Stn, 'SITENAME', 'SiteName', c("XTideStationID", "XTideStationName"))
           
           # The 32-bit R ver 2.12.2 can't handle the current .RData save() binary format (going from ver 2.12.2 to 3.6.2 does work).
-          write.csv(Grand.Drop, file = "Grand.Drop.csv", sep = ",",  row.names = FALSE)   
+          write.csv(Grand.Drop, file = "Grand.Drop.csv", row.names = FALSE)   
 
 
 It appears that tide station name string can be no longer than 46 characters given, perhaps, the other characters on the XTide DOS command line.
