@@ -1,4 +1,4 @@
-Example of adding tide height data to survey data using an R wrapper on a 32-bit DOS version of XTide: 
+Example of adding tide height data to survey data using an R wrapper around a 32-bit DOS version of XTide: 
 - https://flaterco.com/xtide/xtide.html 
 
 On Win10 - 64-bit:
@@ -120,6 +120,19 @@ To XTide's format of: "YYYY-MM-DD HH:MM" and adding one minute (60 secs) to get 
         Grand.Drop$XTide[i] <- as.numeric(unlist(as.vector(read.table("tmp.txt", head = F))))[5]
         file.remove('tmp.txt')
       }
+      
+   
+      
+Final result:
+      
+              Set.ID SITENAME VESNAME YEAR       DATE DROPTIME xTideStationID xTideStationName    xTide
+      1 04-01-01-001      205  Mirage 2004 11/10/2004     7:46        9411340    Santa Barbara 1.000000
+      2 04-01-01-001      205  Mirage 2004 11/10/2004     8:15        9411340    Santa Barbara 5.128665
+      3 04-01-01-001      205  Mirage 2004 11/10/2004     8:31        9411340    Santa Barbara 4.930759
+
+      
+      
+      
     
 
 
