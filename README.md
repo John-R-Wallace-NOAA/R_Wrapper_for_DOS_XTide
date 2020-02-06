@@ -26,7 +26,7 @@ It appears that tide station name string can be no longer than 46 characters giv
             # 'Santa Monica, Municipal Pier, San Pedro Ch' => 'Santa Monica, Municipal Pier, San Pedro Ch'
           
           # Re-read in the csv and save() for a backup on Win10 - 64bit
-          read.csv("Grand.Drop.csv", head = T, stringsAsFactors = FALSE)
+          Grand.Drop <- read.csv("Grand.Drop.csv", head = T, stringsAsFactors = FALSE)
           save(Grand.Drop, file = 'Grand.Drop Short Site Names 5 Feb 2020.RData')
           # load("Grand.Drop Short Site Names 5 Feb 2020.RData")
 
