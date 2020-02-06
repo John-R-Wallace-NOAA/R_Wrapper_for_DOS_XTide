@@ -1,6 +1,6 @@
 Example of adding tide height data to survey data using an R wrapper on a 32-bit DOS version of XTide: https://flaterco.com/xtide/xtide.html 
 
-On Win10 64-bit:
+On Win10 - 64-bit:
 
 Set up a data frame in R with tide station names ( https://flaterco.com/xtide/locations.html ) and time of day
 
