@@ -1,4 +1,4 @@
-Example of adding tide height data to survey data using an R wrapper on a 32-bit DOS version of XTide ( https://flaterco.com/xtide/xtide.html )
+Example of adding tide height data to survey data using an R wrapper on a 32-bit DOS version of XTide: https://flaterco.com/xtide/xtide.html 
 
 On Win10 64-bit:
 
@@ -36,7 +36,7 @@ On WinXP - 32 bit:
 Install DOS XTide from: https://flaterco.com/files/xtide/xtide-2.15-DOS.zip onto Oracle VM VirtualBox WinXP running under Win10.
 - Read the README.DOS file - make note of "If using a DOS box (CMD.EXE) in a 32-bit version of Windows, LFN and DPMI should just work.".  
 - Setting the environmental variables didn't seem to work, but XTide worked without them for results for my local area.
-- I ignored and README.DOS instructions to use unzip32.exe and just used Win10's Windows Explorer (right-click on a .zip file) and then moved the files into WinXP.
+- I ignored the README.DOS instructions to use unzip32.exe and just used Win10's Windows Explorer (right-click on a .zip file) and then moved the files into WinXP.
 - There are very helpful settings in Oracle VM VirtualBox to get copy and paste and drag and drop to work across the Windows barrier.
 
 Download: https://flaterco.com/files/xtide/harmonics-dwf-20191229-free.tar.xz; rename harmonics-dwf-20191229-free.tcd to harmonics.tcd and put it in the main XTide directory.
@@ -50,7 +50,7 @@ Test XTide with:
      shell('tide -l "Wilson Cove, San Clemente Island, California" -b "2018-09-01 00:00"')
 
     
-Move Grand.Drop.csv to WinXP and read into R ver 2.12.2 ( https://cran-archive.r-project.org/bin/windows/base/old/2.12.2/ ).
+Move Grand.Drop.csv to WinXP and read into R ver 2.12.2: https://cran-archive.r-project.org/bin/windows/base/old/2.12.2/
 
 Run the following code, note that the DOS XTide appends to the output file each time, so it needs to be deleted each time after being read into R.
 
