@@ -101,25 +101,24 @@ Switching from my date format:
 To XTide's format of: "YYYY-MM-DD HH:MM" and adding one minute (60 secs) to get a range of time.
 - Note that leading or following extra spaces in the character strings will break XTide.
 
-    for ( i in 1:nrow(Grand.Drop)) {
+      for ( i in 1:nrow(Grand.Drop)) {
     
-       cat(i, "\n\n")
+        cat(i, "\n\n")
        
-       Date <- paste(get.subs(Grand.Drop$DATE[i], "/")[c(3,1,2)], collapse= "-")
-       DropTime <- Grand.Drop$DROPTIME[i]
+        Date <- paste(get.subs(Grand.Drop$DATE[i], "/")[c(3,1,2)], collapse= "-")
+        DropTime <- Grand.Drop$DROPTIME[i]
        
-       hourMin <- get.subs(as.character(strptime (DropTime, format = "%H:%M") + 60), sep = ":")[1:2]
-       hourMin[1] <- get.subs(hourMin[1], sep = " ")[2]
-       hourMin <- paste(hourMin,  collapse = ":")
+        hourMin <- get.subs(as.character(strptime (DropTime, format = "%H:%M") + 60), sep = ":")[1:2]
+        hourMin[1] <- get.subs(hourMin[1], sep = " ")[2]
+        hourMin <- paste(hourMin,  collapse = ":")
        
-       STRING <- paste('tide -l "', Grand.Drop$XTideStationName[i], '" -b "', Date, ' ', DropTime, '" -e "', Date, ' ',hourMin, '" -o tmp.txt -s "00:01" -m m', sep="")
-       shell(STRING)
-       read.table("tmp.txt", head = FALSE)
+        STRING <- paste('tide -l "', Grand.Drop$XTideStationName[i], '" -b "', Date, ' ', DropTime, '" -e "', Date, ' ',hourMin, '" -o tmp.txt -s "00:01" -m m', sep="")
+        shell(STRING)
+        read.table("tmp.txt", head = FALSE)
        
-       Grand.Drop$XTide[i] <- as.numeric(unlist(as.vector(read.table("tmp.txt", head = F))))[5]
-       file.remove('tmp.txt')
-       
-    }
+        Grand.Drop$XTide[i] <- as.numeric(unlist(as.vector(read.table("tmp.txt", head = F))))[5]
+        file.remove('tmp.txt')
+      }
     
 
 
