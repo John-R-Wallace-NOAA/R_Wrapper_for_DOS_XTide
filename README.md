@@ -132,7 +132,7 @@ Final result:
     2 04-01-01-001      205  Mirage 2004 11/10/2004     8:15        9411340 Santa Barbara, California 5.605676
     3 04-01-01-001      205  Mirage 2004 11/10/2004     8:31        9411340 Santa Barbara, California 5.447639
 
-
+    save(Grand.Drop, file = 'Grand.Drop, XTide values 5 Feb 2020.RData')
       
       
       
