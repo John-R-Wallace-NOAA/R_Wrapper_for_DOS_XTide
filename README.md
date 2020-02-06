@@ -6,6 +6,7 @@ On Win10 - 64-bit:
 Set up a data frame in R with tide station names ( https://flaterco.com/xtide/locations.html ) and time of day.
 
           # My specific instuctions 
+          load("W:/ALL_USR/JRW/Hook & Line Survey/2019/R/Grand.2019.RData") 
           Site.Tide.Stn <- JRWToolBox::xlsxToR("W:/ALL_USR/JRW/Hook & Line Survey/2019/Tide Stations.xlsx", 3)
           
           Grand.Drop <- Grand.2019[!duplicated(paste(Grand.2019$Set.ID, Grand.2019$DROPNUM)), c("Set.ID", "SITENAME", "VESNAME", "YEAR", "DATE", "DROPTIME") ]
