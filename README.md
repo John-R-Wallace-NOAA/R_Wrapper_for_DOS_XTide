@@ -86,9 +86,9 @@ Helper function below is from: https://github.com/John-R-Wallace-NOAA/JRWToolBox
               else apply(matrix(x, ncol = 1), 1, subs, sep = sep)
           }
       }
-      
-====================================================================
-
+ 
+ 
+Read in the csv file and fill the XTide.m column with NA's:
 
     Grand.Drop <- read.csv("Grand.Drop.csv", head = T, stringsAsFactors = FALSE)
     Grand.Drop$XTide.m <- NA
