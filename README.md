@@ -91,14 +91,15 @@ Helper function below is from: https://github.com/John-R-Wallace-NOAA/JRWToolBox
 
 
     Grand.Drop <- read.csv("Grand.Drop.csv", head = T, stringsAsFactors = FALSE)
-    Grand.Drop$XTide <- NA
+    Grand.Drop$XTide.m <- NA
 
 Switching from my date format: 
 
-            Set.ID SITENAME VESNAME YEAR       DATE DROPTIME xTideStationID xTideStationName   xTide
-    1 04-01-01-001      205  Mirage 2004 11/10/2004     7:46        9411340    Santa Barbara      NA
-    2 04-01-01-001      205  Mirage 2004 11/10/2004     8:15        9411340    Santa Barbara      NA
-    3 04-01-01-001      205  Mirage 2004 11/10/2004     8:31        9411340    Santa Barbara      NA
+            Set.ID SITENAME VESNAME YEAR       DATE DROPTIME XTideStationID          XTideStationName XTide.m
+    1 04-01-01-001      205  Mirage 2004 11/10/2004     7:46        9411340 Santa Barbara, California      NA
+    2 04-01-01-001      205  Mirage 2004 11/10/2004     8:15        9411340 Santa Barbara, California      NA
+    3 04-01-01-001      205  Mirage 2004 11/10/2004     8:31        9411340 Santa Barbara, California      NA
+
 
 To XTide's format of: "YYYY-MM-DD HH:MM" and adding one minute (60 secs) to get a range of time.
 - Note that leading or following extra spaces in the character strings will break XTide.
@@ -118,7 +119,7 @@ To XTide's format of: "YYYY-MM-DD HH:MM" and adding one minute (60 secs) to get 
         shell(STRING)
         read.table("tmp.txt", head = FALSE)
        
-        Grand.Drop$XTide[i] <- as.numeric(unlist(as.vector(read.table("tmp.txt", head = F))))[5]
+        Grand.Drop$XTide.m[i] <- as.numeric(unlist(as.vector(read.table("tmp.txt", head = F))))[5]
         file.remove('tmp.txt')
       }
       
