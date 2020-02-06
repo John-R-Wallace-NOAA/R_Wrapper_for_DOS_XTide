@@ -52,7 +52,7 @@ Test XTide with:
     
 Move Grand.Drop.csv to WinXP and read into R ver 2.12.2: https://cran-archive.r-project.org/bin/windows/base/old/2.12.2/
 
-Run the following code, note that the DOS XTide appends to the output file each time, so it needs to be deleted each time after being read into R.
+Run the following code, note that the DOS XTide appends to the output file each time it is run, so the output file needs to be deleted each time after being read into R.
 
 
 Helper function from: https://github.com/John-R-Wallace-NOAA/JRWToolBox , base::strsplit() could be used, but it is a little more awkward.
