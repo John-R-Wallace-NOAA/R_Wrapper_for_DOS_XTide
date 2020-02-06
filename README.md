@@ -101,7 +101,7 @@ Switching from my date format:
     3 04-01-01-001      205  Mirage 2004 11/10/2004     8:31        9411340 Santa Barbara, California      NA
 
 
-To XTide's format of: "YYYY-MM-DD HH:MM" and adding one minute (60 secs) to get a range of time.
+To XTide's format of: "YYYY-MM-DD HH:MM" and adding one minute (60 secs) to get a range of time:
 - Note that leading or following extra spaces in the character strings will break XTide.
 
       for ( i in 1:nrow(Grand.Drop)) {
