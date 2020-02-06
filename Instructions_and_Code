@@ -51,6 +51,7 @@
 
 # Helper function from: https://github.com/John-R-Wallace-NOAA/JRWToolBox , base::strsplit() could be used, but it is a little more awkward.
        
+       
        get.subs <- function (x, sep = ",", collapse = F)       {
           subs <- function(x, sep = ",") {
               " #   DATE WRITTEN:  26 May 1995,  Revised Apr 2017  "
@@ -92,6 +93,7 @@ Grand.Drop$XTide <- NA
 3 04-01-01-001      205  Mirage 2004 11/10/2004     8:31        9411340    Santa Barbara      NA
 
 # To XTide's format of: "YYYY-MM-DD HH:MM" and adding one minute (60 secs) to get a range of time.
+
 
     for ( i in 1:nrow(Grand.Drop)) {
     
