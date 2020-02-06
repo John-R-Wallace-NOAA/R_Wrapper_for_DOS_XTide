@@ -3,7 +3,7 @@ Example of adding tide height data to survey data using an R wrapper on a 32-bit
 
 On Win10 - 64-bit:
 
-Set up a data frame in R with tide station names ( https://flaterco.com/xtide/locations.html ) and time of day
+Set up a data frame in R with tide station names ( https://flaterco.com/xtide/locations.html ) and time of day.
 
           # My specific instuctions 
           Site.Tide.Stn <- JRWToolBox::xlsxToR("W:/ALL_USR/JRW/Hook & Line Survey/2019/Tide Stations.xlsx", 3)
