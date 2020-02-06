@@ -50,8 +50,8 @@
 
 
 # Helper function from: https://github.com/John-R-Wallace-NOAA/JRWToolBox , base::strsplit() could be used, but it is a little more awkward.
-      get.subs <- function (x, sep = ",", collapse = F) 
-      {
+       
+       get.subs <- function (x, sep = ",", collapse = F)       {
           subs <- function(x, sep = ",") {
               " #   DATE WRITTEN:  26 May 1995,  Revised Apr 2017  "
               " #   Author:  John R. Wallace (John.Wallace@noaa.gov)  "
@@ -63,8 +63,8 @@
               if (is.na(y[1] + 0)) 
                   return(x)
               substring(x, c(1, y + 1), c(y - 1, nc))
-          }
-          "  "
+          }        
+          "   "
           if (length(x) == 1) {
               if (collapse) 
                   paste(subs(x, sep = sep), collapse = "")
